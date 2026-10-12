@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff3a6" />
+  <meta name="description" content="Athul's tiny corner of the internet: software, questionable jokes, and a brain with too many tabs open." />
+  <meta property="og:title" content="Athul.exe — Internet Person" />
+  <meta property="og:description" content="Software engineer. Professional overthinker. Occasional comedian (self-certified)." />
+  <meta property="og:type" content="website" />
+  <title>Athul.exe — Internet Person</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1c1830;--paper:#fffdf6;--yellow:#ffe66d;--pink:#ff8fab;--blue:#91d9ff;--green:#b8f2a1;--purple:#cbb7ff;--line:3px solid var(--ink);--shadow:5px 5px 0 var(--ink)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Space Grotesk',sans-serif;overflow-x:hidden}button,a{font:inherit}button{color:inherit;cursor:pointer}a{color:inherit}.mono{font-family:'DM Mono',monospace}.wrap{width:min(1060px,calc(100% - 32px));margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-weight:700}.logo{display:inline-flex;align-items:center;gap:8px;text-decoration:none}.logo-dot{width:14px;height:14px;background:var(--pink);border:2px solid var(--ink);border-radius:50%;display:inline-block}.status{font-size:.76rem;border:2px solid var(--ink);border-radius:99px;padding:7px 10px;background:var(--green);box-shadow:2px 2px 0 var(--ink)}
+    .hero{padding:38px 0 58px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.eyebrow{display:inline-block;background:var(--yellow);border:2px solid var(--ink);padding:7px 10px;transform:rotate(-2deg);font-size:.78rem;font-weight:700}.hero h1{font-size:clamp(3.4rem,10vw,7rem);line-height:.88;letter-spacing:-.085em;margin:22px 0 18px}.hero h1 .highlight{position:relative;display:inline-block;z-index:0}.hero h1 .highlight:after{content:'';position:absolute;left:-2%;right:-3%;bottom:4%;height:30%;background:var(--pink);z-index:-1;transform:rotate(-2deg)}.hero p{font-size:clamp(1rem,2vw,1.2rem);line-height:1.6;max-width:510px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:12px 16px;border:var(--line);border-radius:12px;background:white;box-shadow:var(--shadow);font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .15s}.btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}.btn.primary{background:var(--yellow)}.hero-art{position:relative;min-height:320px;display:grid;place-items:center}.blob{width:min(290px,75vw);aspect-ratio:1;background:var(--blue);border:var(--line);border-radius:46% 54% 52% 48% / 51% 43% 57% 49%;display:grid;place-items:center;transform:rotate(7deg);box-shadow:var(--shadow);animation:wobble 6s ease-in-out infinite}.face{font-size:clamp(6rem,15vw,9rem);transform:rotate(-7deg);filter:drop-shadow(3px 3px 0 white)}.sticker{position:absolute;border:var(--line);box-shadow:3px 3px 0 var(--ink);padding:9px 12px;font-weight:700;z-index:2}.sticker.one{top:25px;right:0;background:var(--pink);transform:rotate(9deg)}.sticker.two{bottom:28px;left:0;background:var(--green);transform:rotate(-8deg)}.spark{position:absolute;font-size:2rem;animation:float 3s ease-in-out infinite}.spark.a{top:18%;left:8%}.spark.b{bottom:13%;right:10%;animation-delay:1s}
+    section{padding:42px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:22px}.section-head h2{font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.06em;margin:0}.section-head p{margin:0;max-width:300px;font-size:.9rem;line-height:1.5}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:20px;border:var(--line);border-radius:18px;box-shadow:var(--shadow);min-height:190px;transition:transform .2s}.card:hover{transform:translateY(-5px) rotate(-1deg)}.card:nth-child(1){background:var(--yellow)}.card:nth-child(2){background:var(--pink)}.card:nth-child(3){background:var(--green)}.card .emoji{font-size:2.1rem}.card h3{font-size:1.25rem;margin:14px 0 8px}.card p{line-height:1.55;margin:0}.quizbox{border:var(--line);border-radius:22px;background:var(--purple);padding:clamp(20px,5vw,38px);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr .8fr;gap:28px;align-items:center}.quizbox h2{font-size:clamp(2rem,5vw,3.4rem);line-height:1;letter-spacing:-.06em;margin:12px 0}.quizbox p{line-height:1.6}.quiz-options{display:grid;gap:10px}.option{border:2px solid var(--ink);border-radius:12px;background:white;padding:12px 14px;text-align:left;font-weight:700;transition:transform .15s}.option:hover{transform:translateX(4px);background:var(--yellow)}.result{display:none;margin-top:14px;padding:14px;background:var(--paper);border:2px dashed var(--ink);border-radius:12px;line-height:1.5;font-weight:600}.result.show{display:block;animation:pop .25s ease-out}.flags{display:grid;grid-template-columns:1fr 1fr;gap:16px}.flag{border:var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.flag.green{background:var(--green)}.flag.red{background:#ffc0cb}.flag h3{margin:0 0 12px;font-size:1.5rem}.flag ul{margin:0;padding-left:20px;line-height:1.9}.contact{background:var(--ink);color:white;padding:42px;border-radius:24px;text-align:center;position:relative;overflow:hidden}.contact h2{font-size:clamp(2.4rem,7vw,5rem);line-height:.95;letter-spacing:-.07em;margin:12px auto;max-width:700px}.contact p{line-height:1.6;color:#e7e2f3}.contact .btn{border-color:white;box-shadow:4px 4px 0 var(--pink)}.contact .btn:hover{box-shadow:1px 1px 0 var(--pink)}.footer{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:22px 0 30px;font-size:.8rem;color:#5e596e}.tiny-link{border:0;background:transparent;text-decoration:underline;padding:4px}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);background:var(--ink);color:white;padding:12px 16px;border-radius:99px;opacity:0;pointer-events:none;transition:.2s;z-index:10;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}.confetti{position:fixed;top:-20px;width:10px;height:14px;z-index:99;pointer-events:none;animation:fall 1.7s linear forwards}@keyframes wobble{0%,100%{border-radius:46% 54% 52% 48% / 51% 43% 57% 49%;transform:rotate(7deg)}50%{border-radius:55% 45% 43% 57% / 43% 55% 45% 57%;transform:rotate(2deg)}}@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-12px) rotate(8deg)}}@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}@keyframes fall{to{transform:translateY(110vh) rotate(700deg);opacity:.85}}
+    @media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:24px;gap:6px}.hero-art{min-height:270px;grid-row:1}.blob{width:220px}.face{font-size:7rem}.hero h1{font-size:clamp(3.5rem,17vw,6rem);margin-top:18px}.cards{grid-template-columns:1fr}.card{min-height:unset}.section-head{display:block}.section-head p{margin-top:8px}.quizbox{grid-template-columns:1fr;gap:12px}.flags{grid-template-columns:1fr}.contact{padding:32px 18px}.footer{align-items:flex-start;flex-direction:column}.topbar{padding:15px 0}.status{font-size:.68rem}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="logo" href="#top" aria-label="Athul home"><span class="logo-dot"></span><span>athul.exe</span></a>
+    <span class="status mono">● ONLINE-ish</span>
+  </header>
+  <main id="top" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <span class="eyebrow mono">WELCOME TO MY LITTLE CORNER OF THE INTERNET</span>
+        <h1 id="hero-title">Oh, you<br>found <span class="highlight">me.</span></h1>
+        <p>I'm Athul. Software engineer by profession, professional overthinker by passion. I write code, collect questionable thoughts, and occasionally act like I have my life figured out.</p>
+        <div class="actions">
+          <a class="btn primary" href="#lore">Explore the lore <span aria-hidden="true">↘</span></a>
+          <button class="btn" id="surpriseBtn" type="button">Press for nonsense ✨</button>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="A playful smiling face illustration">
+        <span class="spark a" aria-hidden="true">✦</span><span class="spark b" aria-hidden="true">✳</span>
+        <div class="blob"><span class="face" aria-hidden="true">🫠</span></div>
+        <span class="sticker one">100% human*</span><span class="sticker two">*probably</span>
+      </div>
+    </section>
+
+    <section id="lore">
+      <div class="section-head"><h2>The character stats</h2><p>Not a résumé. Nobody asked for that here.</p></div>
+      <div class="cards">
+        <article class="card"><span class="emoji" aria-hidden="true">💻</span><h3>Work mode</h3><p>Turning coffee into code. Bugs are just surprise features with confidence.</p></article>
+        <article class="card"><span class="emoji" aria-hidden="true">🧠</span><h3>Brain status</h3><p>47 tabs open. One is playing music. Absolutely no idea which one.</p></article>
+        <article class="card"><span class="emoji" aria-hidden="true">🧭</span><h3>Life plan</h3><p>Currently loading… Please don't unplug the router or ask “what's next?”</p></article>
+      </div>
+    </section>
+
+    <section id="quiz">
+      <div class="quizbox">
+        <div><span class="eyebrow">VERY SCIENTIFIC TEST</span><h2>What kind of visitor are you?</h2><p>Choose the option that best describes your highly mysterious reason for being here.</p><div id="quizResult" class="result" aria-live="polite"></div></div>
+        <div class="quiz-options" role="group" aria-label="Choose your visitor type">
+          <button class="option" data-result="A certified legend. Your reward is absolutely no money and my respect (terms may apply).">👀 Just being nosy</button>
+          <button class="option" data-result="A fellow chaos enthusiast. We should probably not be left unsupervised together.">😂 Here for the jokes</button>
+          <button class="option" data-result="A person of excellent taste. This conclusion is based on one click and zero evidence.">🕵️ Investigating Athul</button>
+          <button class="option" data-result="A brave soul. Send a message and let's see if the conversation has good Wi-Fi.">💬 Looking for a chat</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="flags">
+      <div class="section-head"><h2>Flags department</h2><p>Transparency is important. So is having a sense of humour.</p></div>
+      <div class="flags">
+        <article class="flag green"><h3>🟢 Green flags</h3><ul><li>Respect is non-negotiable.</li><li>Family matters.</li><li>Can laugh at myself.</li><li>Will try to fix the bug before blaming you.</li></ul></article>
+        <article class="flag red"><h3>🔴 Red flags</h3><ul><li>Says “one last thing” and opens 12 tabs.</li><li>Overthinks a two-word reply.</li><li>Uses “it works on my machine.”</li><li>May explain a joke after ruining it.</li></ul></article>
+      </div>
+    </section>
+
+    <section id="hello">
+      <div class="contact"><span class="eyebrow">END OF SCROLL. YOU SURVIVED.</span><h2>Go on. Say hi.</h2><p>Send a meme, a terrible joke, or a normal hello. I make no promises about the quality of my reply, but I do promise it will be human-reviewed.</p><div class="actions" style="justify-content:center"><a class="btn primary" id="instagramLink" href="https://instagram.com/athulmv_" target="_blank" rel="noopener noreferrer">Find me on Instagram ↗</a><button class="btn" id="copyLink" type="button">Copy page link ⧉</button></div></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>© <span id="year"></span> Athul's tiny internet empire.</span><span class="mono">Made with 3 brain cells & questionable CSS.</span><button class="tiny-link" id="topBtn" type="button">Back to top ↑</button></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    // CUSTOMIZE: replace yourusername below with your Instagram username.
+    const INSTAGRAM_USERNAME = 'yourusername';
+    const instagramLink = document.getElementById('instagramLink');
+    instagramLink.href = `https://instagram.com/${INSTAGRAM_USERNAME}`;
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2300)}
+    document.querySelectorAll('.option').forEach(button=>button.addEventListener('click',()=>{
+      const result=document.getElementById('quizResult');result.textContent=button.dataset.result;result.classList.remove('show');void result.offsetWidth;result.classList.add('show');
+    }));
+    document.getElementById('surpriseBtn').addEventListener('click',()=>{
+      const lines=['Achievement unlocked: You clicked a button. Your family must be proud.','Breaking news: Local person avoids responsibilities by visiting a website.','Error 418: I am a teapot. A very confused teapot.','Your screen time called. It said “same time tomorrow?”','Fun fact: You are now 0.03% more informed about a stranger.'];
+      showToast(lines[Math.floor(Math.random()*lines.length)]);confetti();
+    });
+    document.getElementById('copyLink').addEventListener('click',async()=>{
+      try{await navigator.clipboard.writeText(window.location.href);showToast('Link copied. Go spread the nonsense.')}catch(e){showToast('Copy the URL from your browser bar 📋')}
+    });
+    document.getElementById('topBtn').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+    function confetti(){const colors=['#ffe66d','#ff8fab','#91d9ff','#b8f2a1','#cbb7ff'];for(let i=0;i<35;i++){const bit=document.createElement('i');bit.className='confetti';bit.style.left=Math.random()*100+'vw';bit.style.background=colors[Math.floor(Math.random()*colors.length)];bit.style.transform=`rotate(${Math.random()*360}deg)`;bit.style.animationDelay=Math.random()*.45+'s';bit.style.borderRadius=Math.random()>.5?'50%':'2px';document.body.appendChild(bit);setTimeout(()=>bit.remove(),2300)}}
+  </script>
+</body>
+</html>
